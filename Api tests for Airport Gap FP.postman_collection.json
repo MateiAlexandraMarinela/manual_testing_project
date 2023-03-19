@@ -1,0 +1,686 @@
+{
+	"info": {
+		"_postman_id": "0674c24d-ed37-4411-b9b6-de65303b3fae",
+		"name": "Api tests for Airport Gap FP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25295764"
+	},
+	"item": [
+		{
+			"name": "get airports negative testing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/airpor",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"airpor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a list of all airports",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/airports",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"airports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get airport by id positive testing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/airports/YBR?YBR=airport",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"airports",
+						"YBR"
+					],
+					"query": [
+						{
+							"key": "YBR",
+							"value": "airport",
+							"description": "YCB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get airport by id negative testing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/airports/YBDD?YBDD=airport",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"airports",
+						"YBDD"
+					],
+					"query": [
+						{
+							"key": "YBDD",
+							"value": "airport",
+							"description": "YCR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get airport distance negative testing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 422\", function () {\r",
+							"    pm.response.to.have.status(422);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/airports/distance?from=YBR&to=0",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"airports",
+						"distance"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "YBR"
+						},
+						{
+							"key": "to",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get airport distance positive testing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/airports/distance?from=YBR&to=MAG",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"airports",
+						"distance"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "YBR",
+							"description": "YBR"
+						},
+						{
+							"key": "to",
+							"value": "MAG",
+							"description": "MAG"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post favorites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/favorites?airport_id=YCB",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"favorites"
+					],
+					"query": [
+						{
+							"key": "airport_id",
+							"value": "YCB",
+							"description": "YCB"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post favorites negative testing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/favorite?airport_id=MAG",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"favorite"
+					],
+					"query": [
+						{
+							"key": "airport_id",
+							"value": "MAG",
+							"description": "MAG"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get favorites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/favorites",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get favorites with no token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/favorites",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get favorites by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/favorites?YBR=airport",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"favorites"
+					],
+					"query": [
+						{
+							"key": "YBR",
+							"value": "airport",
+							"description": "YCB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch note in favorites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"note\":\" Best service!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/airports/:id?id=YBR&note=YBR",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"airports",
+						":id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "YBR",
+							"description": "8339"
+						},
+						{
+							"key": "note",
+							"value": "YBR",
+							"description": "Best Service!"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "8339"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a favorite",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/favorites/?id=YBR",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"favorites",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "YBR",
+							"description": "8337"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://airportgap.dev-tester.com"
+		},
+		{
+			"key": "token",
+			"value": "-------",
+			"type": "string"
+		}
+	]
+}
