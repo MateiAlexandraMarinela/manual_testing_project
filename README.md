@@ -79,7 +79,7 @@ Test cases:
 
 
 
-The test cases with steps can be viewed here:
+The test cases with steps can be viewed here:<a href="https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/test%20cases%20with%20steps-test%20design.xlsx">Test cases with steps</a>
 
 
 
