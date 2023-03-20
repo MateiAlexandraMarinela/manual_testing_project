@@ -103,6 +103,7 @@ Test cases are executed on the created test Cycle summary:
 
 
 Bugs have been created based on the failed tests.
+Bug example:
 
 
 
