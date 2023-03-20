@@ -125,7 +125,7 @@ Test execution chart:
 <h3>2.API testing</h3>
 
 The API testing was executed on a different aplication:https://airportgap.dev-tester.com/<br>
-The collection used can be found here:
+The collection used can be found here:<a href="https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/Api%20tests%20for%20Airport%20Gap%20FP.postman_collection.json">JSON file with the collection of requests created for the airportgap API</a>
 
 
 <h3>3.SQL section<br></h3>
