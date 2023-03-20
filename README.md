@@ -102,7 +102,7 @@ Test cases are executed on the created test Cycle summary:
 
 
 
-Bugs have been created based on the failed tests.
+Bugs have been created based on the failed tests.<br>
 Bug example: ![Bug1!](
 https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/bug%20report%20example/raport%20bug1.png)
  ![Bug2!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/bug%20report%20example/raport%20bug%202.png)
@@ -111,7 +111,7 @@ https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print
 
 
 
-Regression testing is needed after the bugs are fixed
+Regression testing is needed after the bugs are fixed.
 
 
 <h3>1.7 Test Completion<br></h3>
