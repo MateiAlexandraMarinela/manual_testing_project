@@ -112,7 +112,7 @@ Regression testing is needed after the bugs are fixed
 <h3>1.7 Test Completion<br></h3>
 As the Exit criteria were met and satisfied as mentioned in the appropriate section,<br> 
 this feature is suggested to ‘Go Live’ by the Testing team<br>
-The traceability matrix was generated and can be found here: Traceability matrix<br>
+The traceability matrix was generated and can be found here: <a href="https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/taceability%20matrix/Traceability%20Matrix.xlsx">Traceability matrix</a><br>
 Test execution chart was generated, the final report shows that <br>a number 2 tests have failed of a total of 13<br>
 A number of 13 test cases were planned for execution and all of them were executed<br>
 A number of 2 total bugs were found, for which the priority is medium.
