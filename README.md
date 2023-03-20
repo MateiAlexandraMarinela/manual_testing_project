@@ -51,6 +51,7 @@ Various periodic reports were generated to reflect the current status of the tes
 The following status report was generated after 5 of the test cases were executed,<br>
 and the first bug was found, on the 12th of March 2023.
 
+![mon!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/monitoring%20and%20control3.png)
 
 
 
