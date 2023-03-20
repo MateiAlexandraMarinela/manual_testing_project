@@ -131,7 +131,7 @@ The collection used can be found here:
 <h3>3.SQL section<br></h3>
 Created a database named 'flowershop', and the tables 'customers', 'orders' and 'inventory'
 with all the columns needed to save data per specifications.<br>
-Performed different queries inside the sql file:.
+Performed different queries inside the sql file: <a href="https://github.com/MateiAlexandraMarinela/manual_testing_project/tree/main/MySQL">flowershop.sql</a>
 
 
 
