@@ -95,6 +95,7 @@ Test cases were added to the cycle summary
 <h3>1.6 Test Execution</h3>
 
 Test cases are executed on the created test Cycle summary:
+![Cycle summary!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/Cycle%20Summary-test%20execution.png)
 
 
 
