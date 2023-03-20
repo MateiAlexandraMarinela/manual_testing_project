@@ -11,6 +11,7 @@ The below Story was created in JIRA and describes the functional specifications 
 for which the final project is performed upon.</p>
 
 
+![Story!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/Story-The%20teacher%20role-functional%20specifications.png)
 
 
 
