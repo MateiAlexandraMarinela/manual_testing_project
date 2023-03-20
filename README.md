@@ -72,6 +72,8 @@ Functional test cases were created in Zephyr Squad.<br> Based on the analysis of
 the test design techniques used for generating test cases are use case testing and positive and negative testing.<br>
 Test cases:
 
+![Test C!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/test%20cases-test%20design.png)
+
 
 
 
