@@ -117,6 +117,8 @@ A number of 2 total bugs were found, for which the priority is medium.
 
 Test execution chart:
 
+![Chart!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/raport%20executie.png)
+
 
 <h3>2.API testing</h3>
 
