@@ -104,7 +104,7 @@ Test cases are executed on the created test Cycle summary:
 
 Bugs have been created based on the failed tests.<br>
 Bug example: ![Bug1!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/new%20commit/bug2.png)
- ![Bug2!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/print%20screen%20to%20use%20in%20github/bug%20report%20example/raport%20bug%202.png)
+ ![Bug2!](https://github.com/MateiAlexandraMarinela/manual_testing_project/blob/main/new%20commit/bug22.png)
 
 
 
